@@ -3,3 +3,4 @@ __pychace__
 .idea
 .env
 .gitignore
+bot.log
