@@ -1,0 +1,201 @@
+2025-02-07 22:06:59,533 - aiogram.dispatcher - INFO - Start polling
+2025-02-07 22:06:59,646 - aiogram.dispatcher - INFO - Run polling for bot @CLEANER_DATABOT id=8086638679 - 'CLEANER ROBO'
+2025-02-07 22:06:59,786 - aiogram.event - INFO - Update id=478387665 is not handled. Duration 2 ms by bot id=8086638679
+2025-02-07 22:06:59,786 - aiogram.event - INFO - Update id=478387666 is not handled. Duration 1 ms by bot id=8086638679
+2025-02-07 22:07:05,545 - aiogram.event - INFO - Update id=478387667 is handled. Duration 666 ms by bot id=8086638679
+2025-02-07 22:07:09,292 - aiogram.event - INFO - Update id=478387668 is handled. Duration 350 ms by bot id=8086638679
+2025-02-07 22:07:12,172 - aiogram.event - INFO - Update id=478387669 is not handled. Duration 322 ms by bot id=8086638679
+2025-02-07 22:07:12,173 - aiogram.event - ERROR - Cause exception while process update id=478387669 by bot id=8086638679
+TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted
+Traceback (most recent call last):
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/app.py", line 25, in get_message
+    await event.delete()
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted
+2025-02-07 22:07:17,597 - aiogram.event - INFO - Update id=478387670 is handled. Duration 299 ms by bot id=8086638679
+2025-02-07 22:07:19,592 - aiogram.event - INFO - Update id=478387671 is handled. Duration 148 ms by bot id=8086638679
+2025-02-07 22:07:50,978 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-02-07 22:07:50,979 - aiogram.dispatcher - INFO - Polling stopped for bot @CLEANER_DATABOT id=8086638679 - 'CLEANER ROBO'
+2025-02-07 22:07:50,979 - aiogram.dispatcher - INFO - Polling stopped
+2025-02-07 22:07:51,193 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-02-07 22:07:51,392 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-02-07 22:07:51,576 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-02-07 22:07:51,778 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2025-02-07 22:07:56,568 - aiogram.dispatcher - INFO - Start polling
+2025-02-07 22:07:56,705 - aiogram.dispatcher - INFO - Run polling for bot @CLEANER_DATABOT id=8086638679 - 'CLEANER ROBO'
+2025-02-07 22:07:58,851 - aiogram.event - INFO - Update id=478387672 is handled. Duration 602 ms by bot id=8086638679
+2025-02-07 22:08:13,206 - aiogram.event - INFO - Update id=478387673 is not handled. Duration 118 ms by bot id=8086638679
+2025-02-07 22:08:13,207 - aiogram.event - ERROR - Cause exception while process update id=478387673 by bot id=8086638679
+TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted
+Traceback (most recent call last):
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/app.py", line 25, in get_message
+    await event.delete()
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted
+2025-02-07 22:08:34,971 - aiogram.event - INFO - Update id=478387674 is not handled. Duration 2 ms by bot id=8086638679
+2025-02-07 22:08:42,360 - aiogram.event - INFO - Update id=478387675 is not handled. Duration 2 ms by bot id=8086638679
+2025-02-07 22:08:55,010 - aiogram.event - INFO - Update id=478387676 is not handled. Duration 1 ms by bot id=8086638679
+2025-02-07 22:09:09,477 - aiogram.event - INFO - Update id=478387677 is not handled. Duration 112 ms by bot id=8086638679
+2025-02-07 22:09:09,477 - aiogram.event - ERROR - Cause exception while process update id=478387677 by bot id=8086638679
+TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted
+Traceback (most recent call last):
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/app.py", line 30, in get_message
+    await event.delete()
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/abduvohid/startUpProjects/CleanerBot/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message can't be deleted

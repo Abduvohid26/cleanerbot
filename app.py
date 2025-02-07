@@ -1,12 +1,11 @@
-from aiogram import types, Bot, Dispatcher
-import asyncio
+from aiogram import types, Bot, Dispatcher, F
 from aiogram.filters import Filter  
 from aiogram.filters.chat_member_updated import IS_NOT_MEMBER, IS_MEMBER, ChatMemberUpdatedFilter
 from aiogram.types import ChatMemberUpdated  
 import logging
 import sys
 from decouple import config
-
+import asyncio
 
 
 token = config('BOT_TOKEN')
@@ -20,7 +19,12 @@ class Myfilter(Filter):
     async def __call__(self, message: types.Message):
         return message.chat.type in ['group', 'supergroup']
     
-@dp.message(Myfilter())
+@dp.message(Myfilter(),  F.new_chat_members)
+async def get_message(event: types.Message):
+    print(event.json())
+    await event.delete()
+
+@dp.message(Myfilter(), F.left_chat_member)
 async def get_message(event: types.Message):
     print(event.json())
     await event.delete()
@@ -34,6 +38,7 @@ class Myfilter1(Filter):
 
 @dp.message(lambda message: message.text, Myfilter1())
 async def get_message(msg: types.Message):
+    print(msg.json())
     await msg.answer(text="Assalamu Aleykum Cleaner data botga xush kelibsiz")
 
 
